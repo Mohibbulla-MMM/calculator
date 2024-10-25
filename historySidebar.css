@@ -10,6 +10,7 @@
   padding: 15px;
   overflow: hidden;
   overflow-y: auto;
+  z-index: 10;
 }
 
 .historySideBar section {
@@ -54,8 +55,9 @@
   border-top: 1px solid wheat;
 }
 
-.closedSideBar {
+.closedSideBar,.clearStorage {
   background-color: rgb(0, 0, 0);
+  color: white;
   border: 2px solid wheat;
   font-size: 22px;
   font-weight: bolder;
@@ -68,4 +70,13 @@
   margin: auto;
   margin-bottom: 10px;
   cursor: pointer;
+  /* display: none; */
+}
+.clearStorage{
+  width: 100%;
+  font-weight: bold;
+   font-size: 18px;
+     background-color: wheat;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
 }

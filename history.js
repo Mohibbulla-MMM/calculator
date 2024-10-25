@@ -1,13 +1,12 @@
 const history = document.getElementById("history");
 const historySideBar = document.getElementById("historySideBar");
 // console.log(history);
-const arr = [];
+
 export function text(cal, ans) {
   // console.log(cal, ans);
   //   console.log('text')
   // console.log([cal,ans])
   const item = { cal, ans };
-  // arr.push(item);
   localStorageItemSet(item);
 }
 
@@ -33,6 +32,7 @@ history.addEventListener("click", () => {
   historySideBar.innerHTML = `
   <div class="closedSideBar" id="closedSideBar" >×</div>
   `;
+
   const item = localStorageGetItem();
   // console.log(item);
   item.forEach((value, i) => {
@@ -55,15 +55,28 @@ history.addEventListener("click", () => {
     historySideBar.appendChild(section);
   });
 
+
+  // clear storage button added
+  historySideBar.insertAdjacentHTML(
+    "beforeend",
+    `<button class="clearStorage" id="clearStorage">Clear History</button>`
+  );
+
   // closed sidebar ----------------------
   const closedSideBar = document.querySelector(".closedSideBar");
 
   closedSideBar.addEventListener("click", () => {
     closedSideBarF();
   });
+  // clear Storage ----------------------
+  const clearStorage = document.querySelector(".clearStorage");
+
+  clearStorage.addEventListener("click", () => {
+    clearStorageF();
+  });
 });
 
-// console.log(arr);
+
 
 // text(10, 20);
 // window.text = text;
@@ -72,4 +85,11 @@ history.addEventListener("click", () => {
 function closedSideBarF() {
   historySideBar.style.display = "none";
   // console.log(historySideBar);
+}
+
+// clearStorageF -----------------
+function clearStorageF() {
+  localStorage.removeItem('calm4')
+  localStorageGetItem()  
+  closedSideBarF()
 }

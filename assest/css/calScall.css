@@ -51,7 +51,7 @@
 .calScal:hover + .range {
   display: block;
   opacity: 1;
-  transition: all 1s;
+  transition: all 0.2s;
 }
 .rangeAnimation {
   display: block;
@@ -82,12 +82,12 @@
   outline: none;
   opacity: 1; /* Slightly transparent */
   transition: opacity 0.2s; /* Transition for opacity */
-  transition: all 1s;
+  transition: all 0.2s;
 }
 
 .calScal:hover {
     opacity: 1; /* Full opacity on hover */
-    transition: all 1s;
+    transition: all 0.2s;
 }
 
 
