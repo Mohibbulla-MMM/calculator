@@ -7,7 +7,7 @@
 }
 /* main body tag ---------------- */
 body {
-  background-color: rgb(1, 0, 13);
+  background-color: rgb(255, 255, 255);
   color: white;
   font-size: 20px;
   display: flex;
@@ -20,14 +20,14 @@ body {
 
 /* main container ---------------- */
 .container {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   /* max-width: 400px; */
   min-width: 300px;
   width: 300px;
   border-radius: 12px;
-  border-left: 1px solid rgb(209, 209, 209);
-  border-top: 1px solid rgb(209, 209, 209);
-  box-shadow: 3px 3px 0px 2px rgb(209, 209, 209);
+  border-left: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 0px 2px rgb(0, 0, 0);
   display: flex;
   flex-wrap: wrap;
   /* transform: scale(); */
@@ -37,10 +37,13 @@ body {
 .outPut {
   flex-basis: 100%;
   padding: 60px 10px 20px;
-  background-color: rgb(40, 40, 40);
-  box-shadow: inset 0 -3px 3px 3px rgb(117, 117, 117);
-
-  border-radius: 8px 8px 0 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 5px 5px 4px 0 rgba(128, 128, 128, 0.735),
+    5px 5px 4px 0 rgba(20, 20, 20, 0.303);
+  color: black;
+  /* border-radius: 8px 8px 0 0; */
+  border-radius: 8px;
+  margin-bottom: 20px;
   font-family: sans-serif;
   display: flex;
   flex-wrap: nowrap;
@@ -53,7 +56,7 @@ body {
 /* keypad ---------------- */
 
 .keyPad {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(255, 255, 255);
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -89,17 +92,18 @@ body {
 
 .button,
 .button1 {
+  color: black;
   height: 50px;
   width: 60px;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   /* margin:  5px 0; */
-  box-shadow: inset -5px -5px 5px 0 rgba(128, 128, 128, 0.786),
-    -5px -5px 5px 0 rgba(20, 20, 20, 0.646);
+  box-shadow: inset 5px 5px 5px 0 rgba(128, 128, 128, 0.735),
+    5px 5px 4px 0 rgba(20, 20, 20, 0.303);
   transition: all 0.2s;
   cursor: pointer;
   transform: scale(1);
@@ -123,7 +127,7 @@ body {
 .mathKey .button1,
 .operationKey,
 .functionKey .button {
-  background-color: #000000;
+  background-color: rgb(227, 227, 227);
 }
 
 .operationKey:hover {
