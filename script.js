@@ -1,8 +1,9 @@
+import { text } from "./history.js";
 const outPut = document.querySelector("#outPut");
 const numaricPad = document.querySelector("#numaricPad");
 let arithMatickey = false;
 // console.log(numaricPad);
-
+// console.log(text);
 // numaric pad ---------------------------
 numaricPad.addEventListener("click", (element) => {
   //   console.log(element.target.innerText);
@@ -17,7 +18,7 @@ const mathKey = document.getElementById("mathKey");
 // console.log(mathKey)
 mathKey.addEventListener("click", (element) => {
   const value = element.target.classList.contains("button1");
-  console.log(value);
+  //   console.log(value);
   if (value) {
     if (arithMatickey) {
       outPutF(element.target.innerText);
@@ -51,14 +52,6 @@ clear.addEventListener("click", () => {
   allClearF();
 });
 
-// oparation Key ----------------------
-const operationKey = document.getElementById("operationKey");
-operationKey.addEventListener("click", () => {
-  const text = outPut.innerText;
-  const numConvert = eval(text);
-  outPut.innerText = numConvert;
-});
-
 // backSpace key -----------------------------
 const backSpace = document.getElementById("backSpace");
 backSpace.addEventListener("click", () => {
@@ -68,6 +61,36 @@ backSpace.addEventListener("click", () => {
   if (result.length > 0) {
     outPut.innerText = result;
   } else {
-    outPut.innerText = '0';
+    outPut.innerText = "0";
+  }
+});
+
+// oparation Key ----------------------
+const operationKey = document.getElementById("operationKey");
+operationKey.addEventListener("click", () => {
+  const txt = outPut.innerText;
+
+  const check = txt.charAt(0) == "0";
+  const plus = txt.slice(-1) == "+";
+  const minus = txt.slice(-1) == "-";
+  const division = txt.slice(-1) == "/";
+  const multiply = txt.slice(-1) == "*";
+  console.log(plus, minus, division, multiply);
+  //   console.log(txt.slice(-1)); // Outputs: "!"
+
+  if (check) {
+    return;
+  } else if (plus) {
+    return;
+  } else if (minus) {
+    return;
+  } else if (division) {
+    return;
+  } else if (multiply) {
+    return;
+  } else {
+    const answar = eval(txt);
+    outPut.innerText = answar;
+    text(txt, answar);
   }
 });
