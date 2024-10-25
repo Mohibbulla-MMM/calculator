@@ -3,7 +3,7 @@ const historySideBar = document.getElementById("historySideBar");
 // console.log(history);
 const arr = [];
 export function text(cal, ans) {
-  console.log(cal, ans);
+  // console.log(cal, ans);
   //   console.log('text')
   // console.log([cal,ans])
   const item = { cal, ans };
@@ -14,7 +14,7 @@ export function text(cal, ans) {
 function localStorageItemSet(text) {
   const oldItem = localStorageGetItem();
   const result = [...oldItem, text];
-  console.log(result);
+  // console.log(result);
   localStorage.setItem("calm4", JSON.stringify(result));
 }
 
@@ -29,9 +29,12 @@ function localStorageGetItem() {
 }
 
 history.addEventListener("click", () => {
-  historySideBar.innerHTML = '';
+  historySideBar.style.display = "block";
+  historySideBar.innerHTML = `
+  <div class="closedSideBar" id="closedSideBar" >×</div>
+  `;
   const item = localStorageGetItem();
-  console.log(item);
+  // console.log(item);
   item.forEach((value, i) => {
     const section = document.createElement("section");
     const calP = document.createElement("p");
@@ -48,9 +51,22 @@ history.addEventListener("click", () => {
     section.appendChild(ansP);
     historySideBar.appendChild(section);
   });
+
+  // closed sidebar ----------------------
+  const closedSideBar = document.querySelector(".closedSideBar");
+
+  closedSideBar.addEventListener("click", () => {
+    closedSideBarF();
+  });
 });
 
 // console.log(arr);
 
 // text(10, 20);
 // window.text = text;
+
+// sidebar closed -----------------
+function closedSideBarF() {
+  historySideBar.style.display = "none";
+  // console.log(historySideBar);
+}

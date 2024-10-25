@@ -57,7 +57,7 @@ const backSpace = document.getElementById("backSpace");
 backSpace.addEventListener("click", () => {
   const text = outPut.innerText;
   const result = text.slice(0, -1);
-  console.log(result);
+  // console.log(result);
   if (result.length > 0) {
     outPut.innerText = result;
   } else {
@@ -75,7 +75,7 @@ operationKey.addEventListener("click", () => {
   const minus = txt.slice(-1) == "-";
   const division = txt.slice(-1) == "/";
   const multiply = txt.slice(-1) == "*";
-  console.log(plus, minus, division, multiply);
+  // console.log(plus, minus, division, multiply);
   //   console.log(txt.slice(-1)); // Outputs: "!"
 
   if (check) {

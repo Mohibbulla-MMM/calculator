@@ -5,7 +5,7 @@
   left: 0px;
   top: 0;
   background-color: rgb(67, 67, 67);
-  /* display: none; */
+  display: none;
   padding: 15px;
   overflow: hidden;
   overflow-y: auto;
@@ -26,25 +26,40 @@
 }
 
 .historySideBar .historyNumber {
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgb(58, 58, 58);
-    width: 35px;
-    height: 35px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(58, 58, 58);
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .historySideBar section p {
-    display: block;
-    flex-basis: 100%;
-
+  display: block;
+  flex-basis: 100%;
 }
 
 .historySideBar .historyNumber3 {
-    border-top: 1px solid wheat;
+  border-top: 1px solid wheat;
+}
+
+.closedSideBar {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid wheat;
+  font-size: 22px;
+  font-weight: bolder;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
