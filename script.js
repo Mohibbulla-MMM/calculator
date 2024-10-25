@@ -58,3 +58,16 @@ operationKey.addEventListener("click", () => {
   const numConvert = eval(text);
   outPut.innerText = numConvert;
 });
+
+// backSpace key -----------------------------
+const backSpace = document.getElementById("backSpace");
+backSpace.addEventListener("click", () => {
+  const text = outPut.innerText;
+  const result = text.slice(0, -1);
+  console.log(result);
+  if (result.length > 0) {
+    outPut.innerText = result;
+  } else {
+    outPut.innerText = '0';
+  }
+});

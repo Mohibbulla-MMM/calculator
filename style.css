@@ -15,6 +15,7 @@ body {
   align-items: center;
   height: 100vh;
   min-height: 500px;
+  user-select: none;
 }
 
 /* main container ---------------- */
@@ -35,15 +36,19 @@ body {
 /* dispaly output ---------------- */
 .outPut {
   flex-basis: 100%;
-  padding: 10px;
+  padding: 60px 10px 20px;
   background-color: rgb(40, 40, 40);
   box-shadow: inset 0 -3px 3px 3px rgb(117, 117, 117);
 
   border-radius: 8px 8px 0 0;
   font-family: sans-serif;
   display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
   width: 100%;
   justify-content: end;
+  position: relative;
 }
 /* keypad ---------------- */
 
@@ -123,4 +128,10 @@ body {
 
 .operationKey:hover {
   transform: scale(1.05);
+}
+
+/* grammerly popup box */
+[role="alertdialog"],
+.jfk-bubble .gtx-bubble {
+  display: none;
 }
