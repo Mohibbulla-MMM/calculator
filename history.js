@@ -1,4 +1,5 @@
 const history = document.getElementById("history");
+const historySideBar = document.getElementById("historySideBar");
 // console.log(history);
 const arr = [];
 export function text(cal, ans) {
@@ -26,6 +27,28 @@ function localStorageGetItem() {
     return [];
   }
 }
+
+history.addEventListener("click", () => {
+  historySideBar.innerHTML = '';
+  const item = localStorageGetItem();
+  console.log(item);
+  item.forEach((value, i) => {
+    const section = document.createElement("section");
+    const calP = document.createElement("p");
+    const ansP = document.createElement("p");
+    const p = document.createElement("p");
+    calP.innerText = value.cal;
+    ansP.innerText = " = " + value.ans;
+    p.innerText = i + 1;
+
+    p.classList.add("historyNumber");
+    ansP.classList.add("historyNumber3");
+    section.appendChild(p);
+    section.appendChild(calP);
+    section.appendChild(ansP);
+    historySideBar.appendChild(section);
+  });
+});
 
 // console.log(arr);
 
