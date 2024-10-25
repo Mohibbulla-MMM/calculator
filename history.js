@@ -41,11 +41,14 @@ history.addEventListener("click", () => {
     const ansP = document.createElement("p");
     const p = document.createElement("p");
     calP.innerText = value.cal;
+    calP.setAttribute("title", value.cal);
     ansP.innerText = " = " + value.ans;
+    ansP.classList.add("historyNumber3");
+    ansP.setAttribute("title", value.ans);
+
     p.innerText = i + 1;
 
     p.classList.add("historyNumber");
-    ansP.classList.add("historyNumber3");
     section.appendChild(p);
     section.appendChild(calP);
     section.appendChild(ansP);

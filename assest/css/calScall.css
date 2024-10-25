@@ -1,0 +1,158 @@
+.rangeContainer {
+  position: fixed;
+  bottom: 0;
+  /* left: 50%;
+    transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+  width: 105%;
+  background-color: rgb(222, 222, 222);
+  /* height: 50px; */
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+.rangeContainer .box {
+  /* background-color: red; */
+  position: relative;
+  padding: 10px;
+  width: 300px;
+}
+.range {
+  /* display: none; */
+  position: absolute;
+  width: 40px;
+  /* left: 0; */
+  top: -20px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  transition: all .5s;
+  opacity: 0;
+}
+
+.range::before {
+  content: "";
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+  rotate: 45deg;
+  bottom: -5.5px;
+  right: 1px;
+  /* border-left: ; */
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgb(255, 255, 255);
+}
+
+.calScal:hover + .range {
+  display: block;
+  opacity: 1;
+  transition: all 1s;
+}
+.rangeAnimation {
+  display: block;
+  opacity: 1;
+  animation-name: rangeAnimation;
+  animation-duration: 2s;
+}
+
+@keyframes rangeAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ================================================== */
+/* ================================================== */
+
+.calScal {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%; /* Full width */
+  height: 10px; /* Height of the track */
+  background: #000000; /* Track color */
+  border-radius: 10px;
+  outline: none;
+  opacity: 1; /* Slightly transparent */
+  transition: opacity 0.2s; /* Transition for opacity */
+  transition: all 1s;
+}
+
+.calScal:hover {
+    opacity: 1; /* Full opacity on hover */
+    transition: all 1s;
+}
+
+
+.calScal::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #fcfcfc;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.calScal::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fcfcfc;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.calScal::-ms-thumb {
+  width: 20px; /* Thumb width for IE */
+  height: 20px; /* Thumb height for IE */
+  background: #2c482d; /* Thumb color for IE */
+  border-radius: 50%; /* Round thumb for IE */
+  border: none;
+  cursor: pointer; /* Cursor change on hover */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.calScal::-webkit-slider-runnable-track {
+  height: 10px; /* Track height for Chrome */
+  background: #000000; /* Track color for Chrome */
+  border-radius: 8px; /* Rounded track for Chrome */
+}
+
+.calScal::-moz-range-track {
+  height: 10px; /* Track height for Firefox */
+  background: #000000; /* Track color for Firefox */
+  border-radius: 8px; /* Rounded track for Firefox */
+}
+
+.calScal::-ms-track {
+  height: 10px; /* Track height for IE */
+  background: transparent; /* Transparent background for IE */
+  border-color: transparent; /* No border for IE */
+  color: transparent; /* No color for IE */
+}
+
+.calScal::-ms-fill-lower {
+  background: #000000; /* Lower track color for IE */
+  border-radius: 5px; /* Rounded lower track for IE */
+}
+
+.calScal::-ms-fill-upper {
+  background: #000000; /* Upper track color for IE */
+  border-radius: 5px; /* Rounded upper track for IE */
+}
+
+/* .calScal:focus {
+            outline: none; /* Remove outline when focused 
+        } */

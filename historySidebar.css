@@ -4,6 +4,7 @@
   width: 200px;
   left: 0px;
   top: 0;
+  color: white;
   background-color: rgb(67, 67, 67);
   display: none;
   padding: 15px;
@@ -13,9 +14,9 @@
 
 .historySideBar section {
   width: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: end;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   /* flex-basis: auto; */
   background-color: black;
   margin-bottom: 10px;
@@ -23,6 +24,8 @@
   text-align: right;
   border-radius: 8px;
   position: relative;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 .historySideBar .historyNumber {
@@ -42,6 +45,9 @@
 .historySideBar section p {
   display: block;
   flex-basis: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .historySideBar .historyNumber3 {

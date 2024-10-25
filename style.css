@@ -8,14 +8,15 @@
 /* main body tag ---------------- */
 body {
   background-color: rgb(255, 255, 255);
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   user-select: none;
+  padding-top: 20px;
 }
 
 /* main container ---------------- */

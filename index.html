@@ -6,10 +6,11 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="historySidebar.css" />
+    <link rel="stylesheet" href="./assest/css/calScall.css" />
   </head>
   <body>
     <!-- calculator  -->
-    <div class="container">
+    <div class="container" id="container">
       <!-- output display -->
       <div class="outPut" id="outPut">0.00</div>
       <!-- numaric pad -->
@@ -57,10 +58,25 @@
 
     <!-- sidebar  -->
     <div class="historySideBar" id="historySideBar"></div>
+
+    <!-- input field  -->
+    <div class="rangeContainer">
+      <div class="box">
+        <input
+        class="calScal"
+        id="calScal"
+        type="range"
+        min="10"
+        max="99"
+        value="0"
+        />
+        <div class="range" id="range">0</div>
+      </div>
+    </div>
     <!-- script file -->
     <script type="module" src="script.js"></script>
     <script type="module" src="history.js"></script>
     <script type="module" src="./assest/js/click.js"></script>
-
+    <script type="module" src="./assest/js/calScall.js"></script>
   </body>
 </html>
